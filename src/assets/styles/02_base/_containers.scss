@@ -19,8 +19,6 @@
 html {
 	height: 100%;
 	overflow-x: hidden;
-	margin-left: 32px;
-	width: calc(100% - 32px);
 
 	@include tablet-l-down {
 		margin-left: 8px;

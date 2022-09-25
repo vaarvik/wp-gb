@@ -94,3 +94,13 @@ Finally, Theme rules are similar to state rules in that they describe how module
  @import '03_layout/grid.scss';
  @import '03_layout/site-content.scss';
  @import '03_layout/wrapper.scss';
+
+/**
+ * =========================
+ *    || Modules
+ * =========================
+ */
+
+.block-content#block-content {
+	@import url("/node_modules/@wordpress/components/build-style/style.css");
+}

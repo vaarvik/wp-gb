@@ -1,0 +1,38 @@
+/**
+ *
+ * ██████╗ ███████╗███████╗███████╗████████╗
+ * ██╔══██╗██╔════╝██╔════╝██╔════╝╚══██╔══╝
+ * ██████╔╝█████╗  ███████╗█████╗     ██║
+ * ██╔══██╗██╔══╝  ╚════██║██╔══╝     ██║
+ * ██║  ██║███████╗███████║███████╗   ██║
+ * ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝   ╚═╝
+ *
+ *
+ * This sheet contains:
+ * * Resets of tags
+ *
+ * This sheet is a part of the Base folder and follow the Base rules:
+ * A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes.
+ * It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
+*/
+
+html{
+	box-sizing: border-box;
+}
+
+body,div,main,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,ol,ul,blockquote,q,table,blockquote:before,blockquote:after,q:before,q:after,input[type="search"],textarea,audio,canvas,video,a:focus,a:active,a:hover,img,figure,button,input,select,textarea,select,button,input[type="button"],input[type="reset"],input[type="submit"],button[disabled],input[disabled],input[type="checkbox"],input[type="radio"] {
+	outline: 0;
+	vertical-align: baseline;
+}
+
+* {
+	&,
+	&::before,
+	&::after {
+		box-sizing: inherit;
+	}
+}
+
+[hidden] {
+    display: none;
+}

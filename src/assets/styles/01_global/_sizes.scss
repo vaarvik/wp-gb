@@ -1,0 +1,31 @@
+/**
+ *
+ * ███████╗██╗███████╗███████╗███████╗
+ * ██╔════╝██║╚══███╔╝██╔════╝██╔════╝
+ * ███████╗██║  ███╔╝ █████╗  ███████╗
+ * ╚════██║██║ ███╔╝  ██╔══╝  ╚════██║
+ * ███████║██║███████╗███████╗███████║
+ * ╚══════╝╚═╝╚══════╝╚══════╝╚══════╝
+ *
+ *
+ * This sheet contains:
+ * * Global size variables
+ *
+ * This sheet is a part of the Global folder which is not really a part of SMACSS:
+ * Global stores variables that can be used all over the document and create a consistency in the style.
+*/
+
+//paddings
+$padding-mobile: 16px;
+$padding-desktop: 32px;
+
+//max-widths
+$very-wide-max-width: 1320px;
+$wide-max-width: 960px;
+$normal-max-width: 750px;
+$text-max-width: 580px;
+
+//Set base size
+html {
+	height: 100%;
+}

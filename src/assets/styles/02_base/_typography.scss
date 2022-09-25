@@ -1,0 +1,148 @@
+/**
+ *
+ * ████████╗██╗   ██╗██████╗  ██████╗  ██████╗ ██████╗  █████╗ ██████╗ ██╗  ██╗██╗   ██╗
+ * ╚══██╔══╝╚██╗ ██╔╝██╔══██╗██╔═══██╗██╔════╝ ██╔══██╗██╔══██╗██╔══██╗██║  ██║╚██╗ ██╔╝
+ *    ██║    ╚████╔╝ ██████╔╝██║   ██║██║  ███╗██████╔╝███████║██████╔╝███████║ ╚████╔╝
+ *    ██║     ╚██╔╝  ██╔═══╝ ██║   ██║██║   ██║██╔══██╗██╔══██║██╔═══╝ ██╔══██║  ╚██╔╝
+ *    ██║      ██║   ██║     ╚██████╔╝╚██████╔╝██║  ██║██║  ██║██║     ██║  ██║   ██║
+ *    ╚═╝      ╚═╝   ╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝   ╚═╝
+ *
+ *
+ * This sheet contains:
+ * * Typography changes to tags
+ * * Typography tags
+ *
+ * This sheet is a part of the Base folder and follow the Base rules:
+ * A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes.
+ * It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
+*/
+
+/**
+ * =========================
+ *    || Container tags
+ * =========================
+ */
+
+body {
+	font-family: $font-base;
+  	color: $white;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * =========================
+ *    || Typography tags
+ * =========================
+ */
+
+h1, h2, h3, h4, h5, h6, p, a, blockquote, cite, pre, label, figcaption  {
+	font-weight: inherit;
+	word-break: break-word;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $font-headings;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	+ p {
+		margin-top: 0;
+	}
+}
+
+h1, h2, h4, h6 {
+	font-weight: bold;
+}
+
+h2, h4 {
+	letter-spacing: .5px;
+	font-family: $font-base;
+}
+
+h1 {
+	letter-spacing: .5px;
+	line-height: 1.1em;
+	text-transform: uppercase;
+	@include font-size(32px);
+	@include tablet-p-up {
+		letter-spacing: 1px;
+		@include font-size(48px);
+	}
+}
+
+h2 {
+	@include font-size(24px);
+	@include tablet-p-up {
+		@include font-size(32px);
+	}
+}
+
+h3 {
+	@include font-size(32px);
+}
+
+h4 {
+	@include font-size(24px);
+}
+
+h5 {
+	@include font-size(24px);
+}
+
+h6 {
+	@include font-size(16px);
+	margin-bottom: 4px;
+}
+
+a, blockquote, cite, pre, label, figcaption  {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+
+p {
+	margin-bottom: 8px;
+}
+
+a {
+	color: $cyan;
+	text-decoration: none;
+	cursor: pointer;
+	transition: .1s;
+	&:hover{
+		color: $yellow;
+	}
+}
+
+small, sub, sup {
+	@include font-size(12px);
+}
+
+sup {
+	vertical-align: top;
+}
+
+mark {
+	background-color: $yellow;
+    color: $black;
+}
+
+/**
+ * =========================
+ *    || Figures tags
+ * =========================
+ */
+
+figcaption {
+	@include font-size(14px);
+}
+
+/**
+ * =========================
+ *    || Listings tags
+ * =========================
+ */
+
+dl, ol, ul, dt, dd, li, tr, th, caption {
+	font-family: inherit;
+}

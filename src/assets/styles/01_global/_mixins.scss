@@ -1,0 +1,189 @@
+/**
+ *
+ * ███╗   ███╗███████╗██████╗ ██╗ █████╗     ███╗   ███╗██╗██╗  ██╗██╗███╗   ██╗███████╗
+ * ████╗ ████║██╔════╝██╔══██╗██║██╔══██╗    ████╗ ████║██║╚██╗██╔╝██║████╗  ██║██╔════╝
+ * ██╔████╔██║█████╗  ██║  ██║██║███████║    ██╔████╔██║██║ ╚███╔╝ ██║██╔██╗ ██║███████╗
+ * ██║╚██╔╝██║██╔══╝  ██║  ██║██║██╔══██║    ██║╚██╔╝██║██║ ██╔██╗ ██║██║╚██╗██║╚════██║
+ * ██║ ╚═╝ ██║███████╗██████╔╝██║██║  ██║    ██║ ╚═╝ ██║██║██╔╝ ██╗██║██║ ╚████║███████║
+ * ╚═╝     ╚═╝╚══════╝╚═════╝ ╚═╝╚═╝  ╚═╝    ╚═╝     ╚═╝╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝
+ *
+ *
+ * This sheet contains:
+ * * Mediaqueries for different media.
+ *
+ * This sheet is a part of the Utilities folder which is not really a part of SMACSS:
+ * General classes/helpers that can be used to extend other classes. Often general styles that can be applied wherever.
+ */
+
+@mixin font-size($font-size, $line-height: false) {
+    font-size: calc(#{$font-size - ($font-size * .33)} + 1vmin);
+
+    @if $line-height {
+    	line-height: $line-height;
+    }
+}
+
+@mixin font($font: "default", $weight: 300, $size: "", $line-height: false) {
+	@if $font == "default" {
+		font-family: $font-base;
+	} @else {
+		font-family: $font;
+	}
+	font-weight: $weight;
+
+	@if $size != "" {
+		@include font-size($size, $line-height);
+	}
+}
+
+/**
+ * Check for IE
+ */
+@mixin IE {
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		@content;
+	}
+}
+
+@mixin iOS {
+	@supports (-webkit-touch-callout: none) {
+		@content;
+	}
+
+}
+
+@mixin notIE {
+	@supports not (-ms-high-contrast: none) {
+		@content;
+	}
+}
+
+/**
+ * Media queries
+ */
+@mixin phone-only {
+	@media only screen and (max-width: 599px) {
+		@content;
+	}
+}
+
+@mixin non-desktop {
+	@media only screen and (max-width: 1199px) {
+		@content;
+	}
+}
+
+@mixin phone-p-up {
+	@media only screen and (min-width: 376px) {
+		@content;
+	}
+}
+
+@mixin tablet-p-up {
+	@media only screen and (min-width: 600px) {
+		@content;
+	}
+}
+
+@mixin tablet-l-up {
+	@media only screen and (min-width: 900px) {
+		@content;
+	}
+}
+
+@mixin desktop-up {
+	@media only screen and (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin medium-desktop-up {
+	@media only screen and (min-width: 1500px) {
+		@content;
+	}
+}
+
+@mixin big-desktop-up {
+	@media only screen and (min-width: 1800px) {
+		@content;
+	}
+}
+
+@mixin tablet-p-only {
+	@media only screen and (min-width: 600px) and (max-width: 899px) {
+		@content;
+	}
+}
+
+@mixin tablet-l-only {
+	@media only screen and (min-width: 900px) and (max-width: 1199px) {
+		@content;
+	}
+}
+
+@mixin desktop-only {
+	@media only screen and (min-width: 1200px) and (max-width: 1499px) {
+		@content;
+	}
+}
+
+@mixin medium-desktop-only {
+	@media only screen and (min-width: 1500px) and (max-width: 1799px) {
+		@content;
+	}
+}
+
+@mixin desktop-down {
+	@media only screen and (max-width: 1499px) {
+		@content;
+	}
+}
+
+/**
+ * =========================
+ *    || Tablets (landscape)
+ * =========================
+ * Tablets in landscape mode and less
+ */
+@mixin tablet-l-down {
+	@media only screen and (max-width: 1199px) {
+		@content;
+	}
+}
+
+/**
+ * =========================
+ *    || Tablets (portrait )
+ * =========================
+ * Tablets in portrait mode and less, large display smartphones landscape mode and less
+ */
+
+@mixin tablet-p-down {
+	@media only screen and (max-width: 899px) {
+		@content;
+	}
+}
+
+/**
+ * =========================
+ *    || Phones (landscape)
+ * =========================
+ * Smartphones in landscape mode and less
+ */
+@mixin phone-l-down {
+	@media only screen and (max-width: 767px) {
+		@content;
+	}
+}
+
+/**
+ * =========================
+ *    || Phones (portrait)
+ * =========================
+ * Smartphones in portrait mode and less
+ */
+@mixin phone-p-down {
+	@media only screen and (max-width: 420px) {
+		@content;
+	}
+}

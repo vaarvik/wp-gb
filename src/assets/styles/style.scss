@@ -1,0 +1,96 @@
+/**
+ *
+ * ███████╗████████╗██╗   ██╗██╗     ███████╗
+ * ██╔════╝╚══██╔══╝╚██╗ ██╔╝██║     ██╔════╝
+ * ███████╗   ██║    ╚████╔╝ ██║     █████╗
+ * ╚════██║   ██║     ╚██╔╝  ██║     ██╔══╝
+ * ███████║   ██║      ██║   ███████╗███████╗
+ * ╚══════╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝
+ *
+ *
+ * This sheet contains:
+ * * All the SASS files that is inside the scss folder
+ *
+ * The file/folder structure follows the basic guidelines of SMACSS. In addition to the default categories there has also been added Global (storing SCSS variables) and Utilities (storing general helper classes).
+
+From http://smacss.com/book/categorizing:
+
+"At the very core of SMACSS is categorization. By categorizing CSS rules, we begin to see patterns and can define better practices around each of these patterns."
+There are five types of categories:
+ * Base
+ * Layout
+ * Module
+ * State
+ * Theme
+
+However with some modifications this is the categories for this project:
+ * Global
+ * Base
+ * Layout
+ * Utility
+ * Module
+ * State
+ * Theme
+
+GLOBAL
+==========
+Global is used to store SCSS variables (font-sizes, spacing, etc.) and overall document styles as the font-size for the HTML tag.
+
+BASE
+==========
+Base rules are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.
+Layout rules divide the page into sections.
+
+LAYOUTS
+==========
+Layouts hold one or more modules together.
+
+MODULES
+==========
+Modules are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.
+
+STATE
+==========
+State rules are ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive? They are about describing how a module or layout looks on screens that are smaller or bigger. They are also about describing how a module might look in different views like the home page or the inside page.
+
+THEME
+==========
+Finally, Theme rules are similar to state rules in that they describe how modules or layouts might look. Most sites don’t require a layer of theming but it is good to be aware of it."
+
+*/
+
+/**
+ * =========================
+ *    || Global
+ * =========================
+ */
+
+@import '01_global/colors.scss';
+@import '01_global/sizes.scss';
+@import '01_global/text.scss';
+@import '01_global/functions.scss';
+@import '01_global/mixins.scss';
+
+/**
+ * =========================
+ *    || Base
+ * =========================
+ */
+
+@import '02_base/reset.scss';
+@import '02_base/containers.scss';
+@import '02_base/listings.scss';
+@import '02_base/form.scss';
+@import '02_base/media.scss';
+@import '02_base/typography.scss';
+
+/**
+ * =========================
+ *    || Layout
+ * =========================
+ */
+
+ @import '03_layout/App.scss';
+ @import '03_layout/grid.scss';
+ @import '03_layout/site-content.scss';
+ @import '03_layout/wrapper.scss';

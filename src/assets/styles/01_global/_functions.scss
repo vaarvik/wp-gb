@@ -1,0 +1,35 @@
+/**
+ *
+ * ███████╗██╗   ██╗███╗   ██╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
+ * ██╔════╝██║   ██║████╗  ██║██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
+ * █████╗  ██║   ██║██╔██╗ ██║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗
+ * ██╔══╝  ██║   ██║██║╚██╗██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║
+ * ██║     ╚██████╔╝██║ ╚████║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║
+ * ╚═╝      ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+ *
+ *
+ * This sheet contains:
+ * * Handy SCSS functions
+ *
+ * This sheet is a part of the Global folder which is not really a part of SMACSS:
+ * Global stores variables that can be used all over the document and create a consistency in the style.
+*/
+
+/**
+ * String Replace
+ *
+ * @param   {string}  $string   The string/character to find
+ * @param   {string}  $search   The string that should be searched
+ * @param   {string}  $replace  The string to replace the string/character that is found
+ *
+ * @return  {string}            The new string with the replaced string/character.
+ */
+@function str-replace($string, $search, $replace: '') {
+	$index: str-index($string, $search);
+
+	@if $index {
+	  @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}

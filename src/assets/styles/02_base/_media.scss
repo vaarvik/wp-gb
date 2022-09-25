@@ -1,0 +1,31 @@
+/**
+ *
+ * ███████╗██╗ ██████╗ ██╗   ██╗██████╗ ███████╗███████╗
+ * ██╔════╝██║██╔════╝ ██║   ██║██╔══██╗██╔════╝██╔════╝
+ * █████╗  ██║██║  ███╗██║   ██║██████╔╝█████╗  ███████╗
+ * ██╔══╝  ██║██║   ██║██║   ██║██╔══██╗██╔══╝  ╚════██║
+ * ██║     ██║╚██████╔╝╚██████╔╝██║  ██║███████╗███████║
+ * ╚═╝     ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
+ *
+ *
+ * This sheet contains:
+ * * Styling of figure tags
+ *
+ * This sheet is a part of the Base folder and follow the Base rules:
+ * A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes.
+ * It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
+*/
+
+canvas {
+	border: 3px solid $black;
+}
+
+img {
+	margin: 0;
+	display: block;
+}
+
+audio, video, canvas, iframe, meter, progress, figure, figcaption {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}

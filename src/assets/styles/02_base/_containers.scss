@@ -1,0 +1,59 @@
+/**
+ *
+ * ██╗    ██╗██████╗  █████╗ ██████╗ ██████╗ ███████╗██████╗ ███████╗
+ * ██║    ██║██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗██╔════╝
+ * ██║ █╗ ██║██████╔╝███████║██████╔╝██████╔╝█████╗  ██████╔╝███████╗
+ * ██║███╗██║██╔══██╗██╔══██║██╔═══╝ ██╔═══╝ ██╔══╝  ██╔══██╗╚════██║
+ * ╚███╔███╔╝██║  ██║██║  ██║██║     ██║     ███████╗██║  ██║███████║
+ *  ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝
+ *
+ *
+ * This sheet contains:
+ * * Styling of wrapper tags
+ *
+ * This sheet is a part of the Base folder and follow the Base rules:
+ * A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes.
+ * It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
+*/
+
+html {
+	height: 100%;
+	overflow-x: hidden;
+	margin-left: 32px;
+	width: calc(100% - 32px);
+
+	@include tablet-l-down {
+		margin-left: 8px;
+		width: calc(100% - 8px);
+	}
+}
+
+body {
+	background-color: $black;
+	height: 100%;
+	margin: 0;
+}
+
+main {
+
+}
+
+header {
+
+}
+
+article {
+
+}
+
+section {
+
+}
+
+footer {
+
+}
+
+div {
+
+}

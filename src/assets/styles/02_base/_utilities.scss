@@ -1,0 +1,40 @@
+/**
+ *
+ * ██╗   ██╗████████╗██╗██╗     ██╗████████╗██╗███████╗███████╗
+ * ██║   ██║╚══██╔══╝██║██║     ██║╚══██╔══╝██║██╔════╝██╔════╝
+ * ██║   ██║   ██║   ██║██║     ██║   ██║   ██║█████╗  ███████╗
+ * ██║   ██║   ██║   ██║██║     ██║   ██║   ██║██╔══╝  ╚════██║
+ * ╚██████╔╝   ██║   ██║███████╗██║   ██║   ██║███████╗███████║
+ *  ╚═════╝    ╚═╝   ╚═╝╚══════╝╚═╝   ╚═╝   ╚═╝╚══════╝╚══════╝
+ *
+ *
+ * This sheet contains:
+ * * Utilities for general classes
+ *
+ * This sheet is a part of the Base folder and follow the Base rules:
+ * A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes.
+ * It doesn’t include any class or ID selectors, however this document does because it's utilities. It is defining the default styling for how that element should look in all occurrences on the page.
+*/
+
+.alignfull {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.alignwide{
+	width: $wide-max-width;
+	max-width: 100vw;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.aligntext{
+	width: $text-max-width;
+	max-width: 100vw;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}

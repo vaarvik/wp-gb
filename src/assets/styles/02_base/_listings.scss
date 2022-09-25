@@ -1,0 +1,51 @@
+/**
+ *
+ * ██╗     ██╗███████╗████████╗██╗███╗   ██╗ ██████╗ ███████╗
+ * ██║     ██║██╔════╝╚══██╔══╝██║████╗  ██║██╔════╝ ██╔════╝
+ * ██║     ██║███████╗   ██║   ██║██╔██╗ ██║██║  ███╗███████╗
+ * ██║     ██║╚════██║   ██║   ██║██║╚██╗██║██║   ██║╚════██║
+ * ███████╗██║███████║   ██║   ██║██║ ╚████║╚██████╔╝███████║
+ * ╚══════╝╚═╝╚══════╝   ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
+ *
+ *
+ * This sheet contains:
+ * * Styling of listing tags as lists and tables
+ *
+ * This sheet is a part of the Base folder and follow the Base rules:
+ * A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes.
+ * It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
+*/
+
+/**
+ * =========================
+ *    || Table tags
+ * =========================
+ */
+
+table {
+	border-collapse: collapse; //Removes spacing in table
+	border-style: hidden; //Remove all the outside borders of the existing table
+}
+
+th {
+	text-align: inherit;
+}
+
+/**
+ * =========================
+ *    || List tags
+ * =========================
+ */
+
+ol, ul, dl {
+	margin: 8px 0;
+	padding-inline-start: 0;
+}
+
+dd {
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}

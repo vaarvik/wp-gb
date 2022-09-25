@@ -1,0 +1,84 @@
+/**
+ *
+ * ███████╗ ██████╗ ██████╗ ███╗   ███╗
+ * ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+ * █████╗  ██║   ██║██████╔╝██╔████╔██║
+ * ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+ * ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+ * ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
+ *
+ *
+ * This sheet contains:
+ * * Styling of form tags
+ *
+ * This sheet is a part of the Base folder and follow the Base rules:
+ * A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes.
+ * It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
+*/
+
+
+/**
+ * =========================
+ *    || General
+ * =========================
+ */
+
+input, option, select, textarea, button  {
+	font-family: inherit;
+	@include font-size(14px);
+}
+
+legend {
+	font-family: inherit;
+	font-weight: inherit;
+}
+/**
+ * =========================
+ *    || Form Wrappers
+ * =========================
+ */
+
+fieldset {
+	padding: 8px;
+	margin: 0;
+	border: 2px solid $black;
+}
+
+/**
+ * =========================
+ *    || Fields
+ * =========================
+ */
+
+input {
+	vertical-align: middle;
+	padding: 4px;
+	border: 0;
+	border-bottom: 1px solid $black;
+}
+
+textarea {
+	padding: 8px;
+	border: 1px solid $black;
+}
+
+/**
+ * =========================
+ *    || Buttons
+ * =========================
+ */
+
+button, input[type="button"], input[type="submit"], input[type="reset"] {
+	padding: 16px 24px;
+	border: 0;
+	background-color: $red;
+	color: $white;
+	cursor: pointer;
+	overflow: visible;
+}
+
+button[disabled],
+input[disabled]  {
+	opacity: .5;
+	cursor: not-allowed;
+}

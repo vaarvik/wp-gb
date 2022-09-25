@@ -1,0 +1,26 @@
+@import "/src/assets/styles/01_global/_text.scss";
+
+.ErrorPage {
+	align-items: center;
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+	justify-content: center;
+	text-align: center;
+
+	h1 {
+		text-transform: none;
+	}
+
+	h1, p {
+		margin: 24px 0;
+	}
+
+	i {
+		opacity: .75;
+	}
+
+	:first-child {
+		margin-top: 0;
+	}
+}

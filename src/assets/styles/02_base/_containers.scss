@@ -19,11 +19,6 @@
 html {
 	height: 100%;
 	overflow-x: hidden;
-
-	@include tablet-l-down {
-		margin-left: 8px;
-		width: calc(100% - 8px);
-	}
 }
 
 body {

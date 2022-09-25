@@ -1,3 +1,4 @@
+import BlockList from "./components/BlockList/BlockList";
 import PageHeader from "./components/PageHeader/PageHeader";
 
 function App() {
@@ -10,9 +11,9 @@ function App() {
         >
           <p>This site is an open source project. Please join the community and add functionalities, components or requests <a href="https://github.com/vaarvik/wp-gb" target="_blank" rel="noreferrer">here</a>.</p>
         </PageHeader>
-        <div className="block-content wrapper wide" id="block-content">
-
-        </div>
+        <section className="wrapper very-wide" id="block-content">
+          <BlockList />
+        </section>
       </main>
     </div>
   );

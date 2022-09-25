@@ -1,7 +1,7 @@
 {
   "name": "wp-gb",
   "description": "WP-GB is a website to help WordPress developers that create blocks for Gutenberg. The goal is to provide a visual documentation of the different components available.",
-  "license" : "MIT",
+  "license": "MIT",
   "author": "Johann Vårvik (https://github.com/vaarvik)",
   "repository": {
     "type": "git",
@@ -11,10 +11,11 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
+    "@testing-library/react": "^12.1.0",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "@wordpress/components": "^21.1.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",

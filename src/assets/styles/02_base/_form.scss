@@ -25,7 +25,7 @@
 
 input, option, select, textarea, button  {
 	font-family: inherit;
-	@include font-size(14px);
+	font-size: $base-font-size;
 }
 
 legend {

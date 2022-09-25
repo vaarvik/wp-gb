@@ -1,0 +1,8 @@
+@import "/src/assets/styles/01_global/_text.scss";
+
+.PageHeader {
+	.PageHeader__preamble {
+		font-size: $base-font-size + 4px;
+		font-style: italic;
+	}
+}

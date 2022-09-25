@@ -15,14 +15,6 @@
  * General classes/helpers that can be used to extend other classes. Often general styles that can be applied wherever.
  */
 
-@mixin font-size($font-size, $line-height: false) {
-    font-size: calc(#{$font-size - ($font-size * .33)} + 1vmin);
-
-    @if $line-height {
-    	line-height: $line-height;
-    }
-}
-
 @mixin font($font: "default", $weight: 300, $size: "", $line-height: false) {
 	@if $font == "default" {
 		font-family: $font-base;
@@ -32,7 +24,8 @@
 	font-weight: $weight;
 
 	@if $size != "" {
-		@include font-size($size, $line-height);
+		font-size: $size;
+		line-height: $line-height;
 	}
 }
 

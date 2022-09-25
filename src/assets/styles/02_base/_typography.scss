@@ -63,34 +63,37 @@ h1 {
 	letter-spacing: .5px;
 	line-height: 1.1em;
 	text-transform: uppercase;
-	@include font-size(32px);
+	font-size: $base-font-size + 18px;
 	@include tablet-p-up {
 		letter-spacing: 1px;
-		@include font-size(48px);
+		font-size: $base-font-size + 34px;
 	}
 }
 
 h2 {
-	@include font-size(24px);
+	font-size: $base-font-size + 10px;
 	@include tablet-p-up {
-		@include font-size(32px);
+		font-size: $base-font-size + 18px;
 	}
 }
 
 h3 {
-	@include font-size(32px);
+	font-size: $base-font-size + 10px;
+	@include tablet-p-up {
+		font-size: $base-font-size + 18px;
+	}
 }
 
 h4 {
-	@include font-size(24px);
+	font-size: $base-font-size + 10px;
 }
 
 h5 {
-	@include font-size(24px);
+	font-size: $base-font-size + 10px;
 }
 
 h6 {
-	@include font-size(16px);
+	font-size: $base-font-size + 2px;
 	margin-bottom: 4px;
 }
 
@@ -115,7 +118,7 @@ a {
 }
 
 small, sub, sup {
-	@include font-size(12px);
+	font-size: $base-font-size - 2px;
 }
 
 sup {
@@ -134,7 +137,7 @@ mark {
  */
 
 figcaption {
-	@include font-size(14px);
+	font-size: $base-font-size;
 }
 
 /**

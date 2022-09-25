@@ -1,7 +1,6 @@
 {
   "name": "wp-gb",
   "description": "WP-GB is a website to help WordPress developers that create blocks for Gutenberg. The goal is to provide a visual documentation of the different components available.",
-  "homepage": "https://github.com/vaarvik/wp-gb#readme",
   "license" : "MIT",
   "author": "Johann Vårvik (https://github.com/vaarvik)",
   "repository": {

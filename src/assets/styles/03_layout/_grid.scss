@@ -3,6 +3,7 @@ $grid-gap-desktop: 16px;
 
 .grid {
 	display: flex;
+	flex-flow: wrap;
 	margin: -$grid-gap-mobile / 2;
 	width: calc(100% + #{$grid-gap-mobile});
 

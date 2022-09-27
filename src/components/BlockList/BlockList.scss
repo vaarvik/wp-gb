@@ -8,7 +8,7 @@
 		border-radius: 4px;
 		display: flex;
 		flex-flow: column;
-		height: 400px;
+		height: 440px;
 		overflow: hidden;
 
 		.BlockItem__component {
@@ -26,11 +26,11 @@
 		display: flex;
 		flex-flow: column;
 		flex-grow: 1;
-		padding: 8px 32px;
+		padding: 16px 32px;
 		width: 100%;
 
 		h2 {
-			font-size: $base-font-size + 4px;
+			font-size: $base-font-size + 2px;
 			text-transform: uppercase;
 		}
 

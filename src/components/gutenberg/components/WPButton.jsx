@@ -2,7 +2,9 @@ import { Button } from "@wordpress/components";
 
 function WPButton(){
     return (
-        <Button variant="primary">Click me!</Button>
+        <div className="wp-component-wrapper">
+            <Button variant="primary">Click me!</Button>
+        </div>
     )
 }
 

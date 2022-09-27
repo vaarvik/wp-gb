@@ -1,4 +1,4 @@
-import { Button } from "@wordpress/components";
+import getSlug from "../../functions/getSlug";
 import components from "../gutenberg/components";
 import BlockItem from "./BlockItem";
 
@@ -10,13 +10,13 @@ function BlockList() {
         {
           components.map(component => (
             <li className="grid__item">
-            <BlockItem
-              title="Button"
-              summary="A simple button"
-              slug="button"
-              category="components"
-            >
-              { component() }
+              <BlockItem
+                title={component.title}
+                summary={component.summary}
+                slug={getSlug(component.title)}
+                category="components"
+              >
+              { component.render() }
             </BlockItem>
           </li>
           ))

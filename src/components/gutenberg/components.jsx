@@ -1,7 +1,7 @@
 import WPAlignmentMatrixControl from "./components/WPAlignmentMatrixControl";
 import WPButton from "./components/WPButton";
 
-export default [
+const components = [
     {
         title: "Button",
         summary: "A simple button.",
@@ -13,3 +13,5 @@ export default [
         render: WPAlignmentMatrixControl
     },
 ];
+
+export default components;

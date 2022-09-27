@@ -1,4 +1,4 @@
-export default (slug) => {
+const getSlug = (slug) => {
     return slug
         .toLowerCase()
         .trim()
@@ -6,3 +6,5 @@ export default (slug) => {
         .replace(/[\s_-]+/g, '-')
         .replace(/^-+|-+$/g, '');
 }
+
+export default getSlug;

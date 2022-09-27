@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import "./BlockList.scss";
 
 function BlockItemInfo({title, summary, category}) {
@@ -9,6 +10,7 @@ function BlockItemInfo({title, summary, category}) {
 		</div>
 		<div className="BlockItemInfo__footer">
 			<p className="BlockItemInfo__category">{category}</p>
+			<Button type="div">Read more</Button>
 		</div>
 	</div>
   )

@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import "./Button.scss";
 
-function Button({type, variation, children}) {
-	let CustomTag = type === "div" ? "div" : (type === "link" ? "a" : "button");
+function Button({type, variation, children, href = null}) {
+	let CustomTag = type === "div" ? "div" : (type === "link" ? Link : "button");
 
 	return (
-		<CustomTag className={`Button ${variation}`}>
+		<CustomTag {...{ to: type === "link" && href ? href : "" }} className={`Button ${variation}`}>
 			{ children }
 		</CustomTag>
 	)

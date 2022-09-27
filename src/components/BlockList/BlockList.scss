@@ -12,15 +12,6 @@
 		overflow: hidden;
 		transition: .15s transform;
 
-
-		&:hover {
-			transform: scale(1.008) translateZ(0);
-
-			.Button::after {
-				transform: translateY(-50%) translateX(0%) rotate(45deg);
-			}
-		}
-
 		.BlockItem__component {
 			align-items: center;
 			display: flex;

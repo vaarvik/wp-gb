@@ -24,7 +24,10 @@
 	}
 
 	&:hover {
+		color: $blue;
+
 		&::after {
+			border-color: $blue;
 			transform: translateY(-50%) translateX(0%) rotate(45deg);
 		}
 	}

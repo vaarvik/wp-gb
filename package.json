@@ -19,7 +19,8 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zustand": "^4.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

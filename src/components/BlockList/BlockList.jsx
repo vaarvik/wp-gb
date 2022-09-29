@@ -1,40 +1,23 @@
-import { Button } from "@wordpress/components";
 import BlockItem from "./BlockItem";
+import useGutenbergStore from "../../store/store"
 
 function BlockList() {
+  const components = useGutenbergStore(state => state.components);
   return (
     <div className="BlockList" id="BlockList">
       <ul className="grid cols-3">
-        <li className="grid__item">
-          <BlockItem
-            title="Button"
-            summary="A simple button"
-            slug="button"
-            category="components"
-          >
-		        <Button variant="primary">Heisann</Button>
-          </BlockItem>
-        </li>
-        <li className="grid__item">
-          <BlockItem
-            title="Button"
-            summary="A simple button"
-            slug="button"
-            category="components"
-          >
-		        <Button variant="primary">Heisann</Button>
-          </BlockItem>
-        </li>
-        <li className="grid__item">
-          <BlockItem
-            title="Button"
-            summary="A simple button"
-            slug="button"
-            category="components"
-          >
-		        <Button variant="primary">Heisann</Button>
-          </BlockItem>
-        </li>
+        {
+          components.map((component, index) => (
+            <li className="grid__item" key={index}>
+              <BlockItem
+                component={component}
+                category="components"
+              >
+              <component.render/>
+            </BlockItem>
+          </li>
+          ))
+        }
       </ul>
     </div>
   );

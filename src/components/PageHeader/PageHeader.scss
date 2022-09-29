@@ -1,6 +1,15 @@
 @import "/src/assets/styles/01_global/_text.scss";
 
 .PageHeader {
+	margin-top: 24px;
+	:first-child {
+		margin-top: 0;
+	}
+
+	:last-child {
+		margin-bottom: 0;
+	}
+
 	.PageHeader__preamble {
 		font-size: $base-font-size + 4px;
 		font-style: italic;

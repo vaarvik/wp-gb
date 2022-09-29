@@ -101,6 +101,9 @@ Finally, Theme rules are similar to state rules in that they describe how module
  * =========================
  */
 
+@import '04_modules/wp-component-wrapper';
+
 .BlockList#BlockList {
+	color: $black;
 	@import url("/node_modules/@wordpress/components/build-style/style.css");
 }

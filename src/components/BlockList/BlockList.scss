@@ -10,6 +10,7 @@
 		flex-flow: column;
 		height: 440px;
 		overflow: hidden;
+		transition: .15s transform;
 
 		.BlockItemComponent {
 			border-radius: 0px;
@@ -22,11 +23,11 @@
 		display: flex;
 		flex-flow: column;
 		flex-grow: 1;
-		padding: 8px 32px;
+		padding: 16px 32px;
 		width: 100%;
 
 		h2 {
-			font-size: $base-font-size + 4px;
+			font-size: $base-font-size + 2px;
 			text-transform: uppercase;
 		}
 
@@ -36,6 +37,9 @@
 
 		.BlockItemInfo__footer {
 			margin-top: auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
 		}
 
 		.BlockItemInfo__category {

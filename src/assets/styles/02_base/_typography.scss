@@ -62,6 +62,7 @@ h2, h4 {
 h1 {
 	letter-spacing: .5px;
 	line-height: 1.1em;
+	margin-bottom: 24px;
 	text-transform: uppercase;
 	font-size: $base-font-size + 18px;
 	@include tablet-p-up {

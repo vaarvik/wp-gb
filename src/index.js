@@ -5,6 +5,7 @@ import App from './App';
 import './assets/styles/style.scss';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import FrontPage from './components/FrontPage/FrontPage';
+import SingleComponentPage from './components/SingleComponentPage/SingleComponentPage';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
@@ -14,8 +15,14 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <FrontPage />
+      },
+      {
+        path: "/:category/:slug",
+        element: <SingleComponentPage />,
+        errorElement: <ErrorPage />,
+        loader: ({params}) => [{slug: "button", category: "components"}].find(datas => datas.slug === params.slug && datas.category === params.category) // data should come from an jsx export file
       }
     ]
   },

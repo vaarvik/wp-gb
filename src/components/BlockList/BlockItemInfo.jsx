@@ -1,4 +1,4 @@
-import getSlug from "../../functions/getSlug";
+import createSlug from "../../functions/createSlug";
 import Button from "../Button/Button";
 import "./BlockList.scss";
 
@@ -11,7 +11,7 @@ function BlockItemInfo({component, category}) {
 		</div>
 		<div className="BlockItemInfo__footer">
 			<p className="BlockItemInfo__category">{category}</p>
-			<Button type="link" href={`${category}/${getSlug(component.title)}`}>Read more</Button>
+			<Button type="link" href={`/${category}/${createSlug(component.title)}`}>Read more</Button>
 		</div>
 	</div>
   )

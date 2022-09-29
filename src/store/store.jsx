@@ -6,7 +6,7 @@ const useGutenbergStore = create((set) => ({
   components: sortByProp(componentsOriginals, "title"),
   updateFilter: (searchText) => {
     const searchTextLC = searchText.toLowerCase();
-    set(() => ({ 
+    set(() => ({
       components: componentsOriginals.filter(component => component.title.toLowerCase().includes(searchTextLC) || component.summary.toLowerCase().includes(searchTextLC))
     }))
   },

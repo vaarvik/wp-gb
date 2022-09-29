@@ -1,31 +1,28 @@
-import { Button } from "@wordpress/components";
 import { useLoaderData } from "react-router-dom";
 import BlockItemComponent from "../BlockList/BlockItemComponent";
 import PageHeader from "../PageHeader/PageHeader";
 
 function SingleComponentPage() {
-  const { category } = useLoaderData();
-  const title = "Fetch title from slug";
-  const preamble = "Fetch preamble from slug";
-  const info = "Fetch info from slug";
+  const component = useLoaderData();
+  const info = "<TODO> Add info on components in export jsx";
   return (
 	<>
 		<PageHeader
-			title={title}
-			preamble={preamble}
+			title={component.title}
+			preamble={component.summary}
 		/>
 
 		<div className="wrapper">
 			<BlockItemComponent>
-				<Button variant="primary">Click me</Button>
+				<component.render/>
 			</BlockItemComponent>
 		</div>
 
 		<section className="wrapper">
 			<br/>
-			<code>Code goes here...</code>
+			<code>{"<TODO> Show code on components"}</code>
 			<p>{info}</p>
-			<p>{category}</p>
+			{/* <p>{category}</p> */}
 		</section>
 	</>
   )

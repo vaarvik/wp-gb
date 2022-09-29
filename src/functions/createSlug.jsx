@@ -1,4 +1,4 @@
-const getSlug = (slug) => {
+const createSlug = (slug) => {
     return slug
         .toLowerCase()
         .trim()
@@ -8,4 +8,4 @@ const getSlug = (slug) => {
         .replace(/^-+|-+$/g, '');
 }
 
-export default getSlug;
+export default createSlug;

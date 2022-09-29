@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, redirect, RouterProvider } from 'react-router-dom';
 import App from './App';
 import './assets/styles/style.scss';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import FrontPage from './components/FrontPage/FrontPage';
+import components from './components/gutenberg/components';
 import SingleComponentPage from './components/SingleComponentPage/SingleComponentPage';
+import createSlug from './functions/createSlug';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
@@ -19,10 +21,19 @@ const router = createBrowserRouter([
         element: <FrontPage />
       },
       {
-        path: "/:category/:slug",
+        path: "/:slug",
+        errorElement: <ErrorPage />,
+        loader: ({params}) => {
+          const component = components.find(component => createSlug(component.title) === params.slug)
+          if(component) return redirect(`/components/${createSlug(component.title)}`, 301);
+          return null;
+        }
+      },
+      {
+        path: "/components/:slug",
         element: <SingleComponentPage />,
         errorElement: <ErrorPage />,
-        loader: ({params}) => [{slug: "button", category: "components"}].find(datas => datas.slug === params.slug && datas.category === params.category) // data should come from an jsx export file
+        loader: ({params}) => components.find(component => createSlug(component.title) === params.slug)
       }
     ]
   },

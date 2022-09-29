@@ -1,0 +1,14 @@
+@import "/src/assets/styles/01_global/text";
+
+.Dropdown {
+    .Dropdown__select {
+        border: none;
+        border-radius: 4px;
+        display: block;
+        font-size: $base-font-size - 2px;
+        max-width: 700px;
+        outline: none;
+        padding: 15px 7px;
+        width: 100%;
+    }
+}

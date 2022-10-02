@@ -7,7 +7,6 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 import FrontPage from './components/FrontPage/FrontPage';
 import components from './components/gutenberg/components';
 import SingleComponentPage from './components/SingleComponentPage/SingleComponentPage';
-import createSlug from './functions/createSlug';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
@@ -24,16 +23,16 @@ const router = createBrowserRouter([
         path: "/:slug",
         errorElement: <ErrorPage />,
         loader: ({params}) => {
-          const component = components.find(component => createSlug(component.title) === params.slug)
-          if(component) return redirect(`/components/${createSlug(component.title)}`, 301);
+          const component = components.find(component => component.slug === params.slug)
+          if(component) return redirect(`/${component.category}/${component.slug}`, 301);
           return null;
         }
       },
       {
-        path: "/components/:slug",
+        path: "/:category/:slug",
         element: <SingleComponentPage />,
         errorElement: <ErrorPage />,
-        loader: ({params}) => components.find(component => createSlug(component.title) === params.slug)
+        loader: ({params}) => components.find(component => component.slug === params.slug && component.category === params.category)
       }
     ]
   },

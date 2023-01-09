@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
-import BlockItemComponent from "../BlockList/BlockItemComponent";
-import PageHeader from "../PageHeader/PageHeader";
+import BlockItemComponent from "../../components/BlockList/BlockItemComponent";
+import PageHeader from "../../components/PageHeader/PageHeader";
 
 function SingleComponentPage() {
   const component = useLoaderData();
@@ -11,6 +11,7 @@ function SingleComponentPage() {
 			title={component.title}
 			preamble={component.summary}
 		/>
+
 
 		<div className="wrapper">
 			<BlockItemComponent>

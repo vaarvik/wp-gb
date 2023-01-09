@@ -1,8 +1,6 @@
 import BlockItem from "./BlockItem";
-import useGutenbergStore from "../../store/store"
 
-function BlockList() {
-  const components = useGutenbergStore(state => state.components);
+function BlockList({components}) {
   return (
     <div className="BlockList" id="BlockList">
       <ul className="grid cols-3">

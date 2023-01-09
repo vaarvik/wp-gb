@@ -1,9 +1,7 @@
-import useGutenbergStore from "../../store/store";
 import "./Dropdown.scss";
 
-function Dropdown({options = [{title: "None", value: 0}]}) {
-    const sortComponentsBy = useGutenbergStore(state => state.sortBy);
-    const onSelect = (option) => sortComponentsBy(option.target.value);
+function Dropdown({options = [{title: "None", value: 0}], onOptionSelect}) {
+    const onSelect = (option) => onOptionSelect(option.target.value);
 
     return (
         <div className="Dropdown">
@@ -11,7 +9,7 @@ function Dropdown({options = [{title: "None", value: 0}]}) {
                 { options.map((option, index) => <option className="Dropdown__option" key={index} value={option.value} disabled={option.isDisabled ?? false}>{option.title}</option>) }
             </select>
         </div>
-        
+
     )
 }
 

@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import { createBrowserRouter, redirect, RouterProvider } from 'react-router-dom';
 import App from './App';
 import './assets/styles/style.scss';
-import ErrorPage from './components/ErrorPage/ErrorPage';
-import FrontPage from './components/FrontPage/FrontPage';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
+import DefaultBlocksFrontPage from './pages/DefaultBlocksFrontPage/DefaultBlocksFrontPage';
+import CustomBlocksFrontPage from './pages/CustomBlocksFrontPage/CustomBlocksFrontPage';
 import components from './components/gutenberg/components';
-import SingleComponentPage from './components/SingleComponentPage/SingleComponentPage';
+import SingleComponentPage from './pages/SingleComponentPage/SingleComponentPage';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <FrontPage />
+        element: <CustomBlocksFrontPage />
       },
       {
         path: "/:slug",

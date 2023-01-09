@@ -26,6 +26,7 @@
 body {
 	font-family: $font-base;
   	color: $white;
+	font-weight: 300;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -50,13 +51,16 @@ h1, h2, h3, h4, h5, h6{
 	}
 }
 
-h1, h2, h4, h6 {
-	font-weight: bold;
+h1 {
+	font-weight: 500;
+}
+
+h2, h4, h6 {
+	font-weight: 700;
 }
 
 h2, h4 {
 	letter-spacing: .5px;
-	font-family: $font-base;
 }
 
 h1 {
@@ -129,6 +133,10 @@ sup {
 mark {
 	background-color: $yellow;
     color: $black;
+}
+
+code {
+	font-family: $font-mono;
 }
 
 /**

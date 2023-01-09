@@ -15,19 +15,190 @@
  * Global stores variables that can be used all over the document and create a consistency in the style.
 */
 
+/**
+ * Sora Font
+ */
+@font-face {
+    font-family: 'Sora';
+    src: url("/assets/fonts/Sora/Sora-ExtraBold.ttf");
+	font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url("/assets/fonts/Sora/Sora-Bold.ttf");
+	font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url("/assets/fonts/Sora/Sora-SemiBold.ttf");
+	font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url("/assets/fonts/Sora/Sora-Medium.ttf");
+	font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url("/assets/fonts/Sora/Sora-Regular.ttf");
+	font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url("/assets/fonts/Sora/Sora-Light.ttf");
+	font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url("/assets/fonts/Sora/Sora-ExtraLight.ttf");
+	font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url("/assets/fonts/Sora/Sora-Thin.ttf");
+	font-weight: 100;
+}
+
+/**
+ * JetBrains_Mono Font
+ */
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-ExtraBold.ttf");
+	font-weight: 800;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-Bold.ttf");
+	font-weight: 700;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-Bold.ttf");
+	font-weight: 700;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-SemiBold.ttf");
+	font-weight: 600;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-Medium.ttf");
+	font-weight: 500;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-Regular.ttf");
+	font-weight: 400;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-Light.ttf");
+	font-weight: 300;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-ExtraLight.ttf");
+	font-weight: 200;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-Thin.ttf");
+	font-weight: 100;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-ExtraBoldItalic.ttf");
+	font-weight: 800;
+	font-style: italic;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-BoldItalic.ttf");
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-BoldItalic.ttf");
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-SemiBoldItalic.ttf");
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-MediumItalic.ttf");
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-Italic.ttf");
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-LightItalic.ttf");
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-ExtraLightItalic.ttf");
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/assets/fonts/JetBrains_Mono/JetBrainsMono-ThinItalic.ttf");
+	font-weight: 100;
+	font-style: italic;
+}
+
 $base-font-size: 18px;
 $base-line-height: 24px;
 
-$font-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+$font-base: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
 sans-serif;
-$font-headings: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+$font-headings: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
 sans-serif;
-$font-mono: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+$font-mono: "JetBrainsMono", source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 monospace;
 
-$font-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+$font-code: "JetBrainsMono", source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 monospace;
 $font-pre: "Courier 10 Pitch", Courier, monospace;
 
